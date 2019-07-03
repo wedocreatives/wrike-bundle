@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the zibios/wrike-bundle package.
+ * This file is part of the wedocreatives/wrike-bundle package.
  *
  * (c) Zbigniew Ślązak
  *
@@ -9,22 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace Zibios\Bundle\WrikeBundle\Tests\DependencyInjection\Fixtures;
+namespace wedocreatives\Bundle\WrikeBundle\Tests\DependencyInjection\Fixtures;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Zibios\Bundle\WrikeBundle\DependencyInjection\ZibiosWrikeExtension;
-use Zibios\Bundle\WrikeBundle\Tests\TestCase;
+use wedocreatives\Bundle\WrikeBundle\DependencyInjection\wedocreativesWrikeExtension;
+use wedocreatives\Bundle\WrikeBundle\Tests\TestCase;
 
 /**
- * Fixture ZibiosWrikeExtension Test Case.
+ * Fixture wedocreativesWrikeExtension Test Case.
  */
-abstract class FixtureZibiosWrikeExtensionTestCase extends TestCase
+abstract class FixturewedocreativesWrikeExtensionTestCase extends TestCase
 {
     public function testEmptyConfig()
     {
         $container = $this->getContainer('empty');
 
-        self::assertFalse($container->hasParameter('zibios_wrike'), json_encode($container->getParameterBag()));
+        self::assertFalse($container->hasParameter('wedocreatives_wrike'), json_encode($container->getParameterBag()));
     }
 
     public function testDefaultConfig()
@@ -32,8 +32,8 @@ abstract class FixtureZibiosWrikeExtensionTestCase extends TestCase
         $container = $this->getContainer('default');
 
         $expectedConfiguration = [];
-        self::assertTrue($container->hasParameter('zibios_wrike'), json_encode($container->getParameterBag()));
-        self::assertEquals($expectedConfiguration, $container->getParameter('zibios_wrike'));
+        self::assertTrue($container->hasParameter('wedocreatives_wrike'), json_encode($container->getParameterBag()));
+        self::assertEquals($expectedConfiguration, $container->getParameter('wedocreatives_wrike'));
     }
 
     public function testBaseConfig()
@@ -50,8 +50,8 @@ abstract class FixtureZibiosWrikeExtensionTestCase extends TestCase
             ],
             'api_url' => 'http://urlApi',
         ];
-        self::assertTrue($container->hasParameter('zibios_wrike'), json_encode($container->getParameterBag()));
-        self::assertEquals($expectedConfiguration, $container->getParameter('zibios_wrike'));
+        self::assertTrue($container->hasParameter('wedocreatives_wrike'), json_encode($container->getParameterBag()));
+        self::assertEquals($expectedConfiguration, $container->getParameter('wedocreatives_wrike'));
     }
 
     public function testLoadWithOverwriting()
@@ -69,8 +69,8 @@ abstract class FixtureZibiosWrikeExtensionTestCase extends TestCase
             ],
             'api_url' => 'https://urlOverwritten',
         ];
-        self::assertTrue($container->hasParameter('zibios_wrike'));
-        self::assertEquals($expectedConfiguration, $container->getParameter('zibios_wrike'));
+        self::assertTrue($container->hasParameter('wedocreatives_wrike'));
+        self::assertEquals($expectedConfiguration, $container->getParameter('wedocreatives_wrike'));
     }
 
     /**
@@ -81,7 +81,7 @@ abstract class FixtureZibiosWrikeExtensionTestCase extends TestCase
     protected function getContainer($fixture)
     {
         $container = new ContainerBuilder();
-        $container->registerExtension(new ZibiosWrikeExtension());
+        $container->registerExtension(new wedocreativesWrikeExtension());
         $this->loadFixture($container, $fixture);
         $container->compile();
 

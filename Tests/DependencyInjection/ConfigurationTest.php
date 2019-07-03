@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the zibios/wrike-bundle package.
+ * This file is part of the wedocreatives/wrike-bundle package.
  *
  * (c) Zbigniew Ślązak
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Zibios\Bundle\WrikeBundle\Tests\DependencyInjection;
+namespace wedocreatives\Bundle\WrikeBundle\Tests\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Processor;
-use Zibios\Bundle\WrikeBundle\DependencyInjection\Configuration;
+use wedocreatives\Bundle\WrikeBundle\DependencyInjection\Configuration;
 
 /**
  * ConfigurationTest.

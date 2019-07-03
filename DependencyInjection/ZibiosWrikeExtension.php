@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the zibios/wrike-bundle package.
+ * This file is part of the wedocreatives/wrike-bundle package.
  *
  * (c) Zbigniew Ślązak
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Zibios\Bundle\WrikeBundle\DependencyInjection;
+namespace wedocreatives\Bundle\WrikeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\FileLocator;
@@ -18,12 +18,12 @@ use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Zibios\WrikePhpLibrary\Api;
+use wedocreatives\WrikePhpLibrary\Api;
 
 /**
  * Extension.
  */
-class ZibiosWrikeExtension extends Extension
+class wedocreativesWrikeExtension extends Extension
 {
     /**
      * Loads the Wrike configuration.
@@ -40,9 +40,9 @@ class ZibiosWrikeExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
         $config = (array) $config;
 
-        $container->setParameter('zibios_wrike', $config);
+        $container->setParameter('wedocreatives_wrike', $config);
         foreach ($config as $key => $value) {
-            $container->setParameter(sprintf('zibios_wrike.%s', $key), $value);
+            $container->setParameter(sprintf('wedocreatives_wrike.%s', $key), $value);
         }
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
@@ -60,7 +60,7 @@ class ZibiosWrikeExtension extends Extension
      */
     public function getAlias()
     {
-        return 'zibios_wrike';
+        return 'wedocreatives_wrike';
     }
 
     /**
@@ -76,12 +76,12 @@ class ZibiosWrikeExtension extends Extension
             /** @var array $tokens */
             $tokens = $config['permanent_tokens']['tokens'];
             foreach ($tokens as $tokenName => $tokenCode) {
-                $serviceId = sprintf('zibios_wrike.app.%s', strtolower($tokenName));
+                $serviceId = sprintf('wedocreatives_wrike.app.%s', strtolower($tokenName));
 
                 $definition = new Definition(Api::class);
                 $definition->setFactory(
                     [
-                        new Reference('zibios_wrike.api_factory'),
+                        new Reference('wedocreatives_wrike.api_factory'),
                         'createForPermanentToken',
                     ]
                 );

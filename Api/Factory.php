@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the zibios/wrike-bundle package.
+ * This file is part of the wedocreatives/wrike-bundle package.
  *
  * (c) Zbigniew Ślązak
  *
@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Zibios\Bundle\WrikeBundle\Api;
+namespace wedocreatives\Bundle\WrikeBundle\Api;
 
-use Zibios\WrikePhpSdk\ApiFactory;
+use wedocreatives\WrikePhpSdk\ApiFactory;
 
 /**
  * Factory.
@@ -23,7 +23,7 @@ class Factory
      *
      * @throws \InvalidArgumentException
      *
-     * @return \Zibios\WrikePhpLibrary\Api
+     * @return \wedocreatives\WrikePhpLibrary\Api
      */
     public static function create()
     {
@@ -37,7 +37,7 @@ class Factory
      *
      * @throws \InvalidArgumentException
      *
-     * @return \Zibios\WrikePhpLibrary\Api
+     * @return \wedocreatives\WrikePhpLibrary\Api
      */
     public static function createForPermanentToken($token)
     {

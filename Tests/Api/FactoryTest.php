@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the zibios/wrike-bundle package.
+ * This file is part of the wedocreatives/wrike-bundle package.
  *
  * (c) Zbigniew Ślązak
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Zibios\Bundle\WrikeBundle\Tests\Api;
+namespace wedocreatives\Bundle\WrikeBundle\Tests\Api;
 
-use Zibios\Bundle\WrikeBundle\Api\Factory;
-use Zibios\Bundle\WrikeBundle\Tests\TestCase;
-use Zibios\WrikePhpLibrary\Api;
+use wedocreatives\Bundle\WrikeBundle\Api\Factory;
+use wedocreatives\Bundle\WrikeBundle\Tests\TestCase;
+use wedocreatives\WrikePhpLibrary\Api;
 
 /**
  * FactoryTest.

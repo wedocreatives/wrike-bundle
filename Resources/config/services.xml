@@ -5,14 +5,14 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="zibios_wrike.api_factory.class">Zibios\Bundle\WrikeBundle\Api\Factory</parameter>
-        <parameter key="zibios_wrike.api.class">Zibios\WrikePhpLibrary\Api</parameter>
+        <parameter key="wedocreatives_wrike.api_factory.class">wedocreatives\Bundle\WrikeBundle\Api\Factory</parameter>
+        <parameter key="wedocreatives_wrike.api.class">wedocreatives\WrikePhpLibrary\Api</parameter>
     </parameters>
 
     <services>
-        <service id="zibios_wrike.api_factory" class="%zibios_wrike.api_factory.class%" />
-        <service id="zibios_wrike.api" class="%zibios_wrike.api.class%">
-            <factory service="zibios_wrike.api_factory" method="create"/>
+        <service id="wedocreatives_wrike.api_factory" class="%wedocreatives_wrike.api_factory.class%" />
+        <service id="wedocreatives_wrike.api" class="%wedocreatives_wrike.api.class%">
+            <factory service="wedocreatives_wrike.api_factory" method="create"/>
         </service>
     </services>
 </container>

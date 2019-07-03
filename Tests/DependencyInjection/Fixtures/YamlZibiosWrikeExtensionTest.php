@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the zibios/wrike-bundle package.
+ * This file is part of the wedocreatives/wrike-bundle package.
  *
  * (c) Zbigniew Ślązak
  *
@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Zibios\Bundle\WrikeBundle\Tests\DependencyInjection\Fixtures;
+namespace wedocreatives\Bundle\WrikeBundle\Tests\DependencyInjection\Fixtures;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
- * YamlZibiosWrikeExtensionTest.
+ * YamlwedocreativesWrikeExtensionTest.
  */
-class YamlZibiosWrikeExtensionTest extends FixtureZibiosWrikeExtensionTestCase
+class YamlwedocreativesWrikeExtensionTest extends FixturewedocreativesWrikeExtensionTestCase
 {
     /**
      * @param ContainerBuilder $container

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the zibios/wrike-bundle package.
+ * This file is part of the wedocreatives/wrike-bundle package.
  *
  * (c) Zbigniew Ślązak
  *
@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Zibios\Bundle\WrikeBundle\Tests\DependencyInjection;
+namespace wedocreatives\Bundle\WrikeBundle\Tests\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Zibios\Bundle\WrikeBundle\Api\Factory;
-use Zibios\Bundle\WrikeBundle\DependencyInjection\ZibiosWrikeExtension;
-use Zibios\WrikePhpLibrary\Api;
+use wedocreatives\Bundle\WrikeBundle\Api\Factory;
+use wedocreatives\Bundle\WrikeBundle\DependencyInjection\wedocreativesWrikeExtension;
+use wedocreatives\WrikePhpLibrary\Api;
 
 /**
- * ZibiosWrikeExtensionTest.
+ * wedocreativesWrikeExtensionTest.
  */
-class ZibiosWrikeExtensionTest extends DependencyInjectionTestCase
+class wedocreativesWrikeExtensionTest extends DependencyInjectionTestCase
 {
     /**
      * Some basic tests to make sure the configuration is correctly processed in the standard case.
@@ -44,7 +44,7 @@ class ZibiosWrikeExtensionTest extends DependencyInjectionTestCase
                 ]
             );
 
-            $calculatedConfig = $container->getParameter('zibios_wrike');
+            $calculatedConfig = $container->getParameter('wedocreatives_wrike');
         } catch (\Exception $e) {
             $exceptionOccurred = true;
             $exceptionClass = get_class($e);
@@ -92,22 +92,22 @@ class ZibiosWrikeExtensionTest extends DependencyInjectionTestCase
         $container = $this->getContainer([$sourceConfiguration]);
         self::assertEquals(
             Factory::class,
-            $container->getParameter('zibios_wrike.api_factory.class')
+            $container->getParameter('wedocreatives_wrike.api_factory.class')
         );
-        $apiFactory = $container->get('zibios_wrike.api_factory');
+        $apiFactory = $container->get('wedocreatives_wrike.api_factory');
         self::assertInstanceOf(Factory::class, $apiFactory);
 
         self::assertEquals(
             Api::class,
-            $container->getParameter('zibios_wrike.api.class')
+            $container->getParameter('wedocreatives_wrike.api.class')
         );
-        $apiFactory = $container->get('zibios_wrike.api');
+        $apiFactory = $container->get('wedocreatives_wrike.api');
         self::assertInstanceOf(Api::class, $apiFactory);
 
         /** @var array $tokens */
         $tokens = $sourceConfiguration['permanent_tokens']['tokens'];
         foreach ($tokens as $tokenName => $tokenCode) {
-            $serviceId = sprintf('zibios_wrike.app.%s', strtolower($tokenName));
+            $serviceId = sprintf('wedocreatives_wrike.app.%s', strtolower($tokenName));
             self::assertTrue($container->hasDefinition($serviceId));
             self::assertInstanceOf(Api::class, $container->get($serviceId));
         }
@@ -115,11 +115,11 @@ class ZibiosWrikeExtensionTest extends DependencyInjectionTestCase
         $serviceIds = array_keys($container->getDefinitions());
         $expectedServiceIds = [
             'service_container',
-            'zibios_wrike.api_factory',
-            'zibios_wrike.api',
-            'zibios_wrike.app.firstname',
-            'zibios_wrike.app.secondname',
-            'zibios_wrike.app.thirdname',
+            'wedocreatives_wrike.api_factory',
+            'wedocreatives_wrike.api',
+            'wedocreatives_wrike.app.firstname',
+            'wedocreatives_wrike.app.secondname',
+            'wedocreatives_wrike.app.thirdname',
         ];
         self::assertEquals($expectedServiceIds, $serviceIds);
     }
@@ -132,7 +132,7 @@ class ZibiosWrikeExtensionTest extends DependencyInjectionTestCase
     protected function getContainer(array $config = [])
     {
         $container = new ContainerBuilder();
-        $loader = new ZibiosWrikeExtension();
+        $loader = new wedocreativesWrikeExtension();
         $loader->load($config, $container);
         $container->compile();
 

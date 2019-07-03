@@ -4,10 +4,10 @@ Wrike Bundle - Wrike API V3 & V4
 Introduction
 ------------
 
-**This is Symfony Bundle for [Wrike PHP Library](https://github.com/zibios/wrike-php-library).**
+**This is Symfony Bundle for [Wrike PHP Library](https://github.com/wedocreatives/wrike-php-library).**
 
-* For general purpose please check [full configured Wrike PHP SDK](https://github.com/zibios/wrike-php-sdk).
-* For none standard purposes please check [generic Wrike PHP Library](https://github.com/zibios/wrike-php-library).
+* For general purpose please check [full configured Wrike PHP SDK](https://github.com/wedocreatives/wrike-php-sdk).
+* For none standard purposes please check [generic Wrike PHP Library](https://github.com/wedocreatives/wrike-php-library).
 
 Versions
 --------
@@ -21,25 +21,25 @@ Project status
 
 **General**
 
-[![Packagist License](https://img.shields.io/packagist/l/zibios/wrike-bundle.svg)](https://packagist.org/packages/zibios/wrike-bundle)
-[![Packagist Downloads](https://img.shields.io/packagist/dt/zibios/wrike-bundle.svg)](https://packagist.org/packages/zibios/wrike-bundle)
-[![Packagist Version](https://img.shields.io/packagist/v/zibios/wrike-bundle.svg)](https://packagist.org/packages/zibios/wrike-bundle)
-[![Packagist Version](https://img.shields.io/packagist/php-v/zibios/wrike-bundle.svg)](https://packagist.org/packages/zibios/wrike-bundle)
-[![Libraries.io](https://img.shields.io/librariesio/github/zibios/wrike-bundle.svg)](https://libraries.io/packagist/zibios%2Fwrike-bundle)
+[![Packagist License](https://img.shields.io/packagist/l/wedocreatives/wrike-bundle.svg)](https://packagist.org/packages/wedocreatives/wrike-bundle)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/wedocreatives/wrike-bundle.svg)](https://packagist.org/packages/wedocreatives/wrike-bundle)
+[![Packagist Version](https://img.shields.io/packagist/v/wedocreatives/wrike-bundle.svg)](https://packagist.org/packages/wedocreatives/wrike-bundle)
+[![Packagist Version](https://img.shields.io/packagist/php-v/wedocreatives/wrike-bundle.svg)](https://packagist.org/packages/wedocreatives/wrike-bundle)
+[![Libraries.io](https://img.shields.io/librariesio/github/wedocreatives/wrike-bundle.svg)](https://libraries.io/packagist/wedocreatives%2Fwrike-bundle)
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1689/badge)](https://bestpractices.coreinfrastructure.org/projects/1689)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/4923a860-32a0-474a-887f-7766d8407b88/mini.png)](https://insight.sensiolabs.com/projects/4923a860-32a0-474a-887f-7766d8407b88)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bddb2d36ac0943618178a65984252b12)](https://www.codacy.com/app/zibios/wrike-bundle)
-[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/ba535bca76c554597772/maintainability)](https://codeclimate.com/github/zibios/wrike-bundle/maintainability)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bddb2d36ac0943618178a65984252b12)](https://www.codacy.com/app/wedocreatives/wrike-bundle)
+[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/ba535bca76c554597772/maintainability)](https://codeclimate.com/github/wedocreatives/wrike-bundle/maintainability)
 
 **Branch 'master'**
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/zibios/wrike-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/zibios/wrike-bundle/?branch=master)
-[![Scrutinizer Build Status](https://scrutinizer-ci.com/g/zibios/wrike-bundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/zibios/wrike-bundle/build-status/master)
-[![Scrutinizer Code Coverage](https://scrutinizer-ci.com/g/zibios/wrike-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/zibios/wrike-bundle/?branch=master)
-[![Travis Build Status](https://travis-ci.org/zibios/wrike-bundle.svg?branch=master)](https://travis-ci.org/zibios/wrike-bundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/wedocreatives/wrike-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/wedocreatives/wrike-bundle/?branch=master)
+[![Scrutinizer Build Status](https://scrutinizer-ci.com/g/wedocreatives/wrike-bundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/wedocreatives/wrike-bundle/build-status/master)
+[![Scrutinizer Code Coverage](https://scrutinizer-ci.com/g/wedocreatives/wrike-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/wedocreatives/wrike-bundle/?branch=master)
+[![Travis Build Status](https://travis-ci.org/wedocreatives/wrike-bundle.svg?branch=master)](https://travis-ci.org/wedocreatives/wrike-bundle)
 [![StyleCI](https://styleci.io/repos/82083702/shield?branch=master)](https://styleci.io/repos/82083702)
-[![Coverage Status](https://coveralls.io/repos/github/zibios/wrike-bundle/badge.svg?branch=master)](https://coveralls.io/github/zibios/wrike-bundle?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/wedocreatives/wrike-bundle/badge.svg?branch=master)](https://coveralls.io/github/wedocreatives/wrike-bundle?branch=master)
 
 Step 1: Download the Bundle
 ---------------------------
@@ -48,7 +48,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require zibios/wrike-bundle "^1.0"
+$ composer require wedocreatives/wrike-bundle "^1.0"
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -73,7 +73,7 @@ class AppKernel extends Kernel
         $bundles = array(
             // ...
 
-            new Zibios\Bundle\WrikeBundle\ZibiosWrikeBundle(),
+            new wedocreatives\Bundle\WrikeBundle\wedocreativesWrikeBundle(),
         );
 
         // ...
@@ -86,7 +86,7 @@ class AppKernel extends Kernel
 Step 3: Set configuration
 -------------------------
 ```yaml
-zibios_wrike:
+wedocreatives_wrike:
     permanent_tokens:
         tokens:
             first: firstToken
@@ -98,22 +98,22 @@ Step 4: Usage
 -------------------------
 ```php
 // @var ApiFactory
-$apiFactory = $this->getContainer()->get('zibios_wrike.api_factory');
+$apiFactory = $this->getContainer()->get('wedocreatives_wrike.api_factory');
 // @var Api
-$apiWithoutAccessToken = $this->getContainer()->get('zibios_wrike.api');
+$apiWithoutAccessToken = $this->getContainer()->get('wedocreatives_wrike.api');
 
 // @var Api
-$firstAppWithAccessToken = $this->getContainer()->get('zibios_wrike.app.first');
+$firstAppWithAccessToken = $this->getContainer()->get('wedocreatives_wrike.app.first');
 // @var Api
-$secondAppWithAccessToken = $this->getContainer()->get('zibios_wrike.app.second');
+$secondAppWithAccessToken = $this->getContainer()->get('wedocreatives_wrike.app.second');
 ```
 
 Reference
 ---------
 
-[Wrike PHP Library](https://github.com/zibios/wrike-php-library)
+[Wrike PHP Library](https://github.com/wedocreatives/wrike-php-library)
 
-[Wrike PHP SDK](https://github.com/zibios/wrike-php-sdk)
+[Wrike PHP SDK](https://github.com/wedocreatives/wrike-php-sdk)
 
 Official [Wrike API Documentation](https://developers.wrike.com/documentation/api/overview)
 

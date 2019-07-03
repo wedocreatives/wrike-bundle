@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the zibios/wrike-bundle package.
+ * This file is part of the wedocreatives/wrike-bundle package.
  *
  * (c) Zbigniew Ślązak
  *
@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Zibios\Bundle\WrikeBundle;
+namespace wedocreatives\Bundle\WrikeBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * Bundle.
  */
-class ZibiosWrikeBundle extends Bundle
+class wedocreativesWrikeBundle extends Bundle
 {
 }

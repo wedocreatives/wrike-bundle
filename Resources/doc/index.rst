@@ -9,7 +9,7 @@ following command to download the latest stable version of this bundle:
 
 .. code-block:: bash
 
-    $ composer require zibios/wrike-bundle "*"
+    $ composer require wedocreatives/wrike-bundle "*"
 
 This command requires you to have Composer installed globally, as explained
 in the `installation chapter <https://getcomposer.org/doc/00-intro.md>`_ of the Composer documentation.
@@ -33,7 +33,7 @@ in the ``app/AppKernel.php`` file of your project:
             $bundles = array(
                 // ...
 
-                new Zibios\Bundle\WrikeBundle\ZibiosWrikeBundle(),
+                new wedocreatives\Bundle\WrikeBundle\wedocreativesWrikeBundle(),
             );
 
             // ...

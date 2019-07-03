@@ -1,7 +1,7 @@
 imports:
     - { resource: base.yml }
 
-zibios_wrike:
+wedocreatives_wrike:
     api_url: 'https://urlOverwritten'
     permanent_tokens:
         tokens:
