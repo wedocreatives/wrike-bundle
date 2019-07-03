@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "php": ">=5.5,<7.2",
+        "php": ">=5.5",
         "symfony/dependency-injection": "~2.7|~3.0",
         "symfony/config": "~2.7|~3.0",
         "symfony/http-kernel": "~2.7|~3.0",
 
-        "wedocreatives/wrike-php-sdk": "^1.0"
+        "wedocreatives/wrike-php-sdk": "dev-master"
     },
     "require-dev": {
         "symfony/yaml": "~2.3|~3.0",
